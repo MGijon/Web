@@ -1,0 +1,18 @@
+/* Afecta solo a párrafos */
+p {
+	background-color: red;
+}
+
+/* en los párrafos nos quedamos con los enlaces */ 
+p a {
+	font-family: verdana;
+}
+
+h1 {
+	align-content: center;
+	text-align: center;
+}
+
+body {
+	background-color: grey;
+}
