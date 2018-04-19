@@ -21,3 +21,7 @@ button {
 	align-content: center;	
 }
 
+/* solo afectará al elemento div cuyo valor de class (ATRIBUTO de html) sea SoloAEste (VALOR en html) */
+div.SoloAEste {
+	font-family: cursive ;
+}
