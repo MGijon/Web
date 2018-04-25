@@ -8,7 +8,8 @@ p a {
 	font-family: verdana;
 }
 
-h1 {
+/* afecta a elementos h1, h2 y h3 */
+h1, h2, h3 {
 	align-content: center;
 	text-align: center;
 }
