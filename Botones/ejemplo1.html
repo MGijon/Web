@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- incluimos un fichero css externo -->
+	<link rel="stylesheet" type = "text/css" href="ejemplo1.css">
+	<!-- incluimos un fichero de java script externo -->
+	<script src="ejemplo1.js"></script>
+
+<head>
+	<title>Ejemplo 1 de botones funcionalidad</title>
+</head>
+<body>
+
+	<div id="infoDiv">
+  		<h3>Información</h3>
+  		<table id="infoTable">
+	    	<thead>
+	      		<tr>
+	        		<th>Cajas</th>
+	        		<th>Enlaces</th>
+	        		<th>Rellenos</th>
+	      		</tr>
+	    	</thead>
+	    	<tbody>
+	      		<tr>
+	        		<td id="filasCajas">
+	        		</td>
+	        		<td id="filasEnlaces">
+	        		</td>
+	        		<td id="filasRellenos">
+	        		</td>
+	      		</tr>
+	    	</tbody>
+  		</table>
+	</div>
+
+<div id="designDiv">
+
+</div>
+
+<div id="actions">
+  <button onclick="crearElemento('caja')">Crear Caja</button>
+  <button onclick="crearElemento('enlace')">Crear Enlace</button>
+  <button onclick="crearElemento('relleno')">Crear Relleno</button>
+</div>
+
+</body>
+</html>
