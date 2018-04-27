@@ -1,0 +1,20 @@
+/* Declaraciones anidadas
+   ======================
+
+   Son un subtipo de Reglas-@, su sintaxis es un bloque de reglas CSS anidadas que solo afectará
+   al documento bajo ciertas condiciones:
+
+   - El contenido de la regla-@ @media se aplicará solo si el dispositivo que ejecuta el navegador
+     cumple la condición expresada.
+   - El contenido de la regla-@ @supports se aplicará solo si el navegador soporta la característica 
+     mencionada.
+   - El contenido de la regla-@ @document se aplicará solo si la página actual cumple ciertas condiciones.
+*/
+
+@media (min-width: 801px) {
+	/* solo se aplica si la pantalla tiene más de 800 píxeles */
+	body {
+		margin: 0 auto;
+		width: 800px;
+	}
+}
