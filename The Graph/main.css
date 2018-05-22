@@ -13,3 +13,13 @@ body{
 h3.title{
   font-display: block;
 }
+
+div.container{
+    height: auto;
+    weight: 1000px;
+}
+
+div.password-place{
+  height: 750px;
+  weight: 1000px
+}
