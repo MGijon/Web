@@ -1,0 +1,15 @@
+body{
+  background-color: black !important;
+}
+
+.title, .copyright{
+  color: white;
+}
+
+.title{
+  font-size: 60px;
+}
+
+h3.title{
+  font-display: block;
+}
