@@ -16,10 +16,25 @@ h3.title{
 
 div.container{
     height: auto;
-    weight: 1000px;
 }
 
 div.password-place{
   height: 750px;
-  weight: 1000px
+
+  text-align: center;
+  
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+
+  border-top: : 0px solid black;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-left: 0px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
