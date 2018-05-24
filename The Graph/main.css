@@ -19,10 +19,11 @@ div.container{
 }
 
 div.password-place{
-  height: 750px;
+  height: 75%;
 
   text-align: center;
-  
+  vertical-align: middle;
+
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
@@ -38,3 +39,4 @@ div.password-place{
   padding-right: 0px;
   padding-left: 0px;
 }
+
