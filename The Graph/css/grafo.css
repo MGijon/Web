@@ -1,3 +1,12 @@
 body.container{
+	background-color: red;
+	display: table-cell;
+	vertical-align: middle;
+}
 
+.canvas{
+	align-self: center;
+	height: 800px;
+	width: 80%;
+	background-color: white !important;
 }
