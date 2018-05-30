@@ -13,3 +13,24 @@
 .person:hover {
 	border-color: #db5c24;
 }
+
+.NombreEquipo {
+	color: #db5c24;
+}
+
+.carousel-inner img {
+	-webkit-filter: grayscale(15%);
+	filter: grayscale(15%);
+	width: 100%;
+	margin: auto;
+}
+
+.carousel-caption h3 {
+	color: #db5c24 !important;
+}
+
+@media (max-width: 600px) {
+	.carousel-caption {
+		display: none;
+	}
+}
