@@ -1,0 +1,15 @@
+/* Icono de Telegram con el enlace al canal */
+
+.Telegram{
+  position: absolute;
+
+}
+
+@media (min-width: 600px){
+  .Telegram{
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding-left: 0px;
+  }
+}
