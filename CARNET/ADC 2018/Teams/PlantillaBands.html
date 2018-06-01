@@ -12,8 +12,10 @@
 	<body>
 		<!-- Creamos un perfil para cada miembro del equipo -->
 		<div class = "container text-center">
-			<h3 class = "NombreEquipo"> Nombre del equipo </h3>
-			<h4><em> nombre de la universidad de procedencia </em></h4>
+			<div id="universidad-equipo">
+				<h1 class = "NombreEquipo"> Nombre del equipo </h1>
+				<h3><em> nombre de la universidad de procedencia </em></h3>
+			</div>
 			<br>
 			<div class="row">
 				<div class="col-sm-4">
@@ -22,8 +24,8 @@
 							<img src="images/Temporal_cuadrada.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
 						</a>
 						<div id="demo1" class="collapse">
-							<p> estudios </p>
-							<p> otros datos aportados por el sujeto</p>
+							<p>estudios</p>
+							<p>otros datos aportados por el sujeto</p>
 						</div>
 				</div>
 				<div class="col-sm-4">
@@ -32,8 +34,8 @@
 						<img src="images/Temporal_cuadrada2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
 					</a>
 					<div id="demo2" class="collapse">
-						<p> estudios </p>
-						<p> otros datros aportados por el sujeto </p>
+						<p>estudios</p>
+						<p>otros datros aportados por el sujeto</p>
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -42,10 +44,36 @@
 						<img src="images/Temporal_cuadrada3.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
 					</a>
 					<div id="demo3" class="collapse">
-						<p> estudios </p>
-						<p> más y más datos </p>
+						<p>estudios</p>
+						<p>Más y más datos</p>
 					</div>
 				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<p> <strong>Nombre 4</strong> </p>
+					<a href="#demo4" data-toggle="collapse">
+						<img src="images/Temporal_cuadrada4.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+					</a>
+					<div id="demo4" class="collapse">
+						<p>estudios</p>
+						<p>MIERDAS DEL SUJETO CUATRO</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<p> <strong>Nombre 5</strong> </p>
+					<a href="#demo5" data-toggle="collapse">
+						<img src="images/Temporal_cuadrada5.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+					</a>
+					<div id="demo5" class="collapse">
+						<p>estudios </p>
+						<p>MIERDAS DEL SUJETO 5</p>
+					</div>
+				</div>
+			</div>
+
+
 			</div>
 		</div>
 
@@ -98,7 +126,7 @@
 	</div>
 
 	<!-- Añadimos una sección de contactos -->
-	<div class="container">
+<!--	<div class="container">
   		<h3 class="text-center">Contact</h3>
   		<p class="text-center"><em>subcabecera molona!</em></p>
   		<div class="row test">
@@ -126,7 +154,30 @@
    		 	</div>
   		</div>
 	</div>	
+    -->
 
+    <div class="container" id="testimonios">
+    	<h2>Testimonios</h2>
+		<div class="row">
+			<div class="col-sm-6" id="testimonio_1">
+				<h3>personaje 1</h3>
+				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+			</div>
+			<div class="col-sm-6" id="testimonio_2">
+				<h3>personaje 2</h3>
+				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6" id="testimonio_3">
+				<h3>personaje 3</h3>
+				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+			</div>
+			<div class="col-sm-6" id="testimonio_4">
+				<h3>personaje 1</h3>
+				<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+		</div>
+    </div>
 	<!-- Footer -->
 
 	<footer class="text-center">

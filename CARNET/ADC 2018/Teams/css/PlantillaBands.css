@@ -2,6 +2,12 @@
 	padding: 80px 120px;
 }
 
+#universidad-equipo{
+	background-color: white;
+	/* top - right - bottom - left */
+	margin: 0px 0px 120px 0px;
+}
+
 .person {
 	border: 10px solid transparent;
 	margin-bottom: 25px;
@@ -33,6 +39,14 @@
 	.carousel-caption {
 		display: none;
 	}
+}
+
+#testimonios{
+	background-color: #FAFAFA;
+}
+
+#testimonio_1, #testimonio_2, #testimonio_3, #testimonio_4{
+
 }
 
 footer {
