@@ -1,14 +1,19 @@
+/* GENERAL
+   ====== */
 body{
   background-color: black !important;
 }
 
-.title, .copyright{
-  color: white;
+/* HEADER
+   ====== */
+#The_Graph-header{
+  align-items: center;
 }
 
-.title{
+#The_Graph{
   font-size: 60px;
 }
+
 
 h3.title{
   font-display: block;
@@ -62,4 +67,10 @@ div.college-selection{
   padding-bottom: 0px;
   padding-right: 0px;
   padding-left: 0px;
+}
+
+/* FOOTER
+   ====== */
+.title, .copyright{
+  color: white;
 }
