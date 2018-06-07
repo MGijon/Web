@@ -6,13 +6,12 @@ body.container{
 }
 
 .canvas{
-	align-self: center;
-	height: 800px;
-	width: 80%;
+	width: 90%;
+	height: 75%;
 	background-color: white !important;
 	position: absolute;
-	top: 50%;
-	right: 50%
+	top: 10%;
+	right: 5%
 	bottom: ;
-	left: ;
+	left: 5%;
 }
