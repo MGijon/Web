@@ -2,6 +2,7 @@ body.container{
 	background-color: red;
 	display: table-cell;
 	vertical-align: middle;
+	position: relative;
 }
 
 .canvas{
@@ -9,4 +10,9 @@ body.container{
 	height: 800px;
 	width: 80%;
 	background-color: white !important;
+	position: absolute;
+	top: 50%;
+	right: 50%
+	bottom: ;
+	left: ;
 }

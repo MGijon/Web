@@ -6,11 +6,11 @@ body{
 
 /* HEADER
    ====== */
-#The_Graph-header{
+.The_Graph-header{
   align-items: center;
 }
 
-#The_Graph{
+.The_Graph{
   font-size: 60px;
 }
 
@@ -31,20 +31,14 @@ div.password-place{
   vertical-align: middle;
   position: relative;
 
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 0%;
-  margin-left: 0px;
+  margin: 0px 0px 0px 0px;
 
-  border-top: : 0px solid black;
+  border-top: 0px solid black;
   border-bottom: 0px;
   border-right: 0px;
   border-left: 0px;
 
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 div.college-selection{
@@ -53,20 +47,14 @@ div.college-selection{
   text-align: center;
   display: block;
 
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
+  margin: 0px 0px 0px 0px;
 
   border-top: : 0px solid black;
   border-bottom: 0px;
   border-right: 0px;
   border-left: 0px;
 
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 /* FOOTER
