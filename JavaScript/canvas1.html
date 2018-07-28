@@ -14,6 +14,7 @@
 
 		// create a drawing object
 		var ctx = canvas.getContext("2d");
+
 		ctx.fillStyle = "Blue";
 		ctx.fillRect(0, 0, 150, 75);
 
@@ -24,5 +25,34 @@
 		ctx.moveTo(0,0);     // defines the starting point of the line
 		ctx.lineTo(200,100); // defines the ending point of the line
 		ctx.stroke(); 
+
+		ctx.beginPath();
+		ctx.moveTo(20,20);
+		ctx.lineTo(20,100);
+		ctx.lineTo(70,100);
+		ctx.strokeStyle="red";
+		ctx.stroke();
+
+		// GRADIENTS: 
+		// =========
+
+		/*
+		    createLinearGradient(x,y,x1,y1) - creates a linear gradient
+		    createRadialGradient(x,y,r,x1,y1,r1) - creates a radial/circular gradient
+		*/
+
+		var grd=ctx.createLinearGradient(0,0,200,0);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(1,"white");
+
+		ctx.fillStyle=grd;           // Fill with gradient
+		ctx.fillRect(10,110,150,80); 
+
+		var grd=ctx.createRadialGradient(160,50,5,200,60,100);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(1,"white");
+
+		ctx.fillStyle = grd;         // Fill with gradient
+		ctx.fillRect(160,110,200,80); 
 	</script>
 </html>
