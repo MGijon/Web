@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas 1</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500" style="border: 1px solid #db5c24;">
+		
+	</canvas>
+</body>
+	<script type="text/javascript">
+		// getting the canvas element
+		var canvas = document.getElementById("myCanvas");
+
+		// create a drawing object
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "Blue";
+		ctx.fillRect(0, 0, 150, 75);
+
+		ctx.beginPath();                // begins a path
+		ctx.arc(95,50,40,0,2*Math.PI);  // creates an arc/curve. To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI. The x and y parameters define the x- and y-coordinates of the center of the circle. The r parameter defines the radius of the circle. 
+		ctx.stroke();                   // draw a path
+
+		ctx.moveTo(0,0);     // defines the starting point of the line
+		ctx.lineTo(200,100); // defines the ending point of the line
+		ctx.stroke(); 
+	</script>
+</html>
