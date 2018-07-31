@@ -38,7 +38,7 @@ class Hello {
 	function greet() {
 		if ($this -> lang == 'fr') return 'Bonjour';
 		if ($this -> lang == 'es') return 'Hola';
-		return 'Hello'; 
+		return 'Hello';
 	}
 }
 
@@ -46,4 +46,4 @@ $hi = new Hello('es');
 echo $hi->greet()."\n";
 
 
->
+?>
