@@ -1,3 +1,22 @@
+<?php
+
+	session_start();
+	if ( isset($_POST["account"]) && isset($_POST["pw"]) ){
+		unset($_SESSION["account"]); // logout current user
+		if ( $_POST['pw'] == 'umsi' ){
+			$_SESSION['account'] = $_POST['account'];
+			$_SESSION['success'] = "Logger in.";
+			header('Location: app.php');
+			return;
+		} else {
+			$_SESSION["error"] = "Incorrect password";
+			header('Location: logInOut.php');
+			return;
+		}
+	}
+
+?>
+
 <html>
 	<body style= "font-family: sans-serif;">
 		<h1>
