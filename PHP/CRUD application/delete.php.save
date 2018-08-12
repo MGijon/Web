@@ -1,4 +1,4 @@
-<html>
+re<html>
 	<head> <title>Delete element</title> </head>
 	<body>
 		<?php
@@ -13,15 +13,8 @@
 				header('Location: index.php');
 				return;
 			}
-			$stmt = $pdo->prepare("SELECT name, user_id FROM users WHERE user_id = :xyz");
-			$stmt->execute(array(
-				':xyz' => $_GET['user_id']));
-			$row = $stmt->fetch(PDO::FETCH_ASSOC);
-			if ($row === false){
-				$_SESSION['error'] = 'Bad value for user_id';
-				header( 'Location: index.php' );
-				return;
-			}
+			$stmt = $pdo->prepara("SELECT name, user_id FROM users WHERE user_id = :xyz"); // corregir aqui
+
 		?>
 
 		<p>Confirm: Deleting <? htmlentities($row['name']) ?></p>
