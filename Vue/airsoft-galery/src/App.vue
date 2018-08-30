@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <!-- ahora insertamos aquí el contenido del router view -->
     <router-view></router-view>
   </div>
 </template>
