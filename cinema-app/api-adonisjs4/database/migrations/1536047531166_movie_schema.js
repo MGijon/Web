@@ -20,3 +20,5 @@ class MovieSchema extends Schema {
 }
 
 module.exports = MovieSchema
+
+/* esta base será externa, ie no se accederá desde fuera, usaremos otras tablas que se nutran de esta a tal efecto */
