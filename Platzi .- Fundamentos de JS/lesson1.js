@@ -1,4 +1,5 @@
-
+// Introduction and variables //
+// ========================== //
 
 // console.log("hello world")  // print 'hello world' in the console
 
@@ -17,5 +18,5 @@ var str = name.substr(1, 3) // from position 1 takes 3 characters
     
 // interpolation of text:
 // ----------------------
-// print JS code, ths is an example
+// print JS code, this is an example
 var completeNameInterpolated = `${name} ${surname.toUpperCase()}`
