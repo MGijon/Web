@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Understanding how time flow works in JS</title>
+</head>
+<body>
+    <script>
+        //console.log('a')
+        //setTimeout(() => console.log('b'), 2000) // (function, delay in miliseconds)
+        //console.log('c')
+        
+        //console.log('d')
+        //setTimeout(() => console.log('e'), 0) // (function, delay in miliseconds)
+        //console.log('f')
+        
+        // let's simulate what happend if we have a principal program that takes long time
+        setTimeout(() => console.log('Hi'), 2000)
+        for (var i=0; i < 100000; i++){
+            
+        }
+    </script>
+</body>
+</html>
