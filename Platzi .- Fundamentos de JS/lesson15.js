@@ -25,17 +25,20 @@ function getCharacter(id) {
 // Promises is in PENDING state --(resolve)--> FULFILLED state...    .then(val => expected value)
 //                              --(reject)---> REJECTED state...     .catch(err => a function)
 
-
-getCharacter(1)
+function onePromise(){
+    getCharacter(1)
     .then(function(character) {
         console.log(`${character.name}`)    
     })
     .catch(function(id){
         console.log(`fatall error obtainig the character id number ${id}`)
     })
+}
 
+//onePromise()
 
-getCharacter(2)
+function severalPromises(){
+    getCharacter(2)
     .then(function(character) {
         console.log(`${character.name}`)  
         return getCharacter(3)
@@ -51,15 +54,27 @@ getCharacter(2)
     .catch(function(id){
         console.log(`fatal error obtainig the character id number ${id}`)
     })
+}
 
-var ids = [6, 7, 8, 9, 10]
+//severalPromises()
 
-//var promises = ids.map(function(id){
-//    return getCharacter(id)
-//})
+function onError(id){
+    console.log(`Error , id : ${id}`)
+}
 
-var promises = ids.map(id => getCharacter(id)) // array of promises
-Promise
-    .all(promises)
-    .then(data => console.log(data))
-    .catch(console.log('Fatal error'))
+function severalPromisesParalell(){
+    
+    var ids = [6, 7, 8, 9, 10]
+
+    //var promises = ids.map(function(id){
+    //    return getCharacter(id)
+    //})
+
+    var promises = ids.map(id => getCharacter(id)) // array of promises
+    Promise
+        .all(promises)
+        .then(data => console.log(data))
+        .catch(onError)
+}
+
+severalPromisesParalell()
