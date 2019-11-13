@@ -1,14 +1,74 @@
 <?php
-// Las variables en php se comparten entre los bloques presentes en un mismo archivo,
-// así, es práctica habitual definir todo lo que necesitemos en un bloque al comienzo
-// del archivo e ir intercalando los elementos entre el html a continuación.
+/*
+   Las variables en php se comparten entre los bloques presentes en un mismo archivo,
+   así, es práctica habitual definir todo lo que necesitemos en un bloque al comienzo
+   del archivo e ir intercalando los elementos entre el html a continuación.
+*/
 
-// las comillas simples no, pero las dobles interpretarán lo que hay dentro
+/*
+  STRINGS
+
+  - Las comillas simples no, pero las dobles interpretarán lo que hay dentro.
+*/
 $lastName = 'Finch';
 $name = 'Harlod ' . $lastName;
 
 $nameDobles = "Harlod $lastName";
- ?>
+
+
+/*
+  ARREGLOS
+
+  - Empiezan en zero.
+  - No son como en otros lenguajes, son pares claves valor, por defecto estas
+    claves son enteros que comienzan en cero. Podemos cambiar esto.
+  - Evidentemente, se pueden anidar.
+*/
+$jobs = [
+  'Junior Machine Learning Engineer',
+  'Senior Machine Learning Engineer',
+  'Master of the universe'
+];
+//var_dump($jobs[0])
+//var_dump($jobs)
+
+$jobsNuevasClaves = [
+  'primero' => 'Junior Machine Learning Engineer',
+  'segundo' => 'Senior Machine Learning Engineer',
+  'tercero' => 'Master of the fu***ng universe'
+];
+//var_dump($jobsNuevasClaves['primero'])
+
+$jobsExtendido = [
+  [
+    'title' => 'Junior Machine Learning Engineer',
+    'description' => 'bla bla bla bla'
+  ],[
+    'title' => 'Senior Machine Learning Engineer',
+    'description' => 'bla bla bla bla'
+  ],[
+    'title' => 'Master of the fu***ng universe',
+    'description' => 'bla bla bla bla'
+  ]
+];
+//var_dump($jobsExtendido[0]['title'])
+
+/*
+  CONDICIONALES
+*/
+$var1 = 1;
+if ($var1 > 2){
+  echo "$var1 es mayor que 2";
+} else {
+  echo "$var1 es menor que 2";
+}
+
+/*
+  CICLOS
+*/
+// En la sección 'Work Experience'
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -57,36 +117,40 @@ $nameDobles = "Harlod $lastName";
         <div>
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
-            <li class="work-position">
-              <h5>PHP Developer</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-              <strong>Achievements:</strong>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-              </ul>
-            </li>
-            <li class="work-position">
-                <h5>PHP Developer</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-                <strong>Achievements:</strong>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                </ul>
-              </li>
-              <li class="work-position">
-                  <h5>PHP Developer</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-                  <strong>Achievements:</strong>
-                  <ul>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  </ul>
-                </li>
+          <?php
+          /* DO WHILE
+            $idx = 0;
+            do {
+              $idx = $idx + 1;
+              echo '<li class="work-position">';
+              echo '<h5>' .$jobsExtendido[$idx]['title'] .'</h5>';
+              echo '<p>' .$jobsExtendido[$idx]['description'] .'</p>';
+              echo '<strong>Achievements:</strong>';
+              echo '<ul>';
+              echo '<li>Lorem Ipsum</li>';
+              echo '<li>Lorem Ipsum</li>';
+              echo '<li>Lorem Ipsum</li>';
+              echo '</ul>';
+              echo '</li>';
+            } while ($idx < 3);
+          */
+
+          for ($idx = 0; $idx < count($jobsExtendido); $idx++){
+            $idx = $idx + 1;
+            echo '<li class="work-position">';
+            echo '<h5>' .$jobsExtendido[$idx]['title'] .'</h5>';
+            echo '<p>' .$jobsExtendido[$idx]['description'] .'</p>';
+            echo '<strong>Achievements:</strong>';
+            echo '<ul>';
+            echo '<li>Lorem Ipsum</li>';
+            echo '<li>Lorem Ipsum</li>';
+            echo '<li>Lorem Ipsum</li>';
+            echo '</ul>';
+            echo '</li>';
+          }
+
+          ?>
+
           </ul>
         </div>
         <div>
