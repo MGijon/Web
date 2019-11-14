@@ -39,16 +39,40 @@ $jobsNuevasClaves = [
 ];
 //var_dump($jobsNuevasClaves['primero'])
 
+include(jobs.php) // si no se encuentra el archivo dará un warning
+//require(jobs.php) // si no lo encuentra se detiene la ejecución
+//inlcude_once(jobs.php) // evita que si volvemos a incluir el archivo este se incluya de nuevo
+//require_once(jobs.php) // evita que si volvemos a incluir el archivo este se incluya de nuevo
+
+$limitMonths = 12;
 $jobsExtendido = [
   [
     'title' => 'Junior Machine Learning Engineer',
-    'description' => 'bla bla bla bla'
+    'description' => 'bla bla bla bla',
+    'visible' => true,
+    'months' => 6
   ],[
     'title' => 'Senior Machine Learning Engineer',
-    'description' => 'bla bla bla bla'
+    'description' => 'bla bla bla bla',
+    'visible' => true,
+    'months' => 10
   ],[
+    'title' => 'Super Senior Machine Learning Engineer',
+    'description' => 'bla bla bla bla',
+    'visible' => true,
+    'months' => 48
+  ],
+  [
+    'title' => 'Super Saiyan Machine Learning Engineer',
+    'description' => 'bla bla bla bla',
+    'visible' => false,
+    'months' => 21
+  ],
+  [
     'title' => 'Master of the fu***ng universe',
-    'description' => 'bla bla bla bla'
+    'description' => 'bla bla bla bla',
+    'visible' => false,
+    'months' => 120
   ]
 ];
 //var_dump($jobsExtendido[0]['title'])
@@ -67,6 +91,40 @@ if ($var1 > 2){
   CICLOS
 */
 // En la sección 'Work Experience'
+
+
+/*
+  FUNCIONES
+*/
+function getDuration($months){
+  //
+
+  $years = floor($months / 12);
+  %extraMonths = %months % 12;
+  return "$years years and $extramonths months."
+}
+
+function printJob($job){
+  // Contenido de la funcion
+
+  if ($job['visible'] == false){
+    return;
+  }
+
+  echo '<li class="work-position">';
+  echo '<h5>' .$job['title'] .'</h5>';
+  echo '<p>' .$job['description'] .'</p>';
+  echo '<p>' .getDuration($job['months']) .'</p>';
+  echo '<strong>Achievements:</strong>';
+  echo '<ul>';
+  echo '<li>Lorem Ipsum</li>';
+  echo '<li>Lorem Ipsum</li>';
+  echo '<li>Lorem Ipsum</li>';
+  echo '</ul>';
+  echo '</li>';
+}
+
+
 
 ?>
 
@@ -135,8 +193,39 @@ if ($var1 > 2){
             } while ($idx < 3);
           */
 
+          $totalMonths = 0;
           for ($idx = 0; $idx < count($jobsExtendido); $idx++){
+
+            //$totalMonths = $totalMonths + $jobsExtendido[$idx]['months'];
+            $totalMonths += $jobsExtendido[$idx]['months'];
+
+            if ($totalMonths < $limitMonths){
+              break; // salimos del cicle for si la condición se cumple
+            }
+            /*
+            if ($jobsExtendido[$idx]['visible'] == true){
+              $idx = $idx + 1;
+              echo '<li class="work-position">';
+              echo '<h5>' .$jobsExtendido[$idx]['title'] .'</h5>';
+              echo '<p>' .$jobsExtendido[$idx]['description'] .'</p>';
+              echo '<strong>Achievements:</strong>';
+              echo '<ul>';
+              echo '<li>Lorem Ipsum</li>';
+              echo '<li>Lorem Ipsum</li>';
+              echo '<li>Lorem Ipsum</li>';
+              echo '</ul>';
+              echo '</li>';
+            }
+            */
+            /*
+            if ($jobsExtendido[$idx]['visible'] == false){
+              continue;
+            }
+            */
             $idx = $idx + 1;
+
+            printJob($jobsExtendido[$idx])
+            /*
             echo '<li class="work-position">';
             echo '<h5>' .$jobsExtendido[$idx]['title'] .'</h5>';
             echo '<p>' .$jobsExtendido[$idx]['description'] .'</p>';
@@ -147,6 +236,8 @@ if ($var1 > 2){
             echo '<li>Lorem Ipsum</li>';
             echo '</ul>';
             echo '</li>';
+            */
+
           }
 
           ?>
