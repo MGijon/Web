@@ -83,23 +83,7 @@ $jobsExtendido = [
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
           <?php
-          /* DO WHILE
-            $idx = 0;
-            do {
-              $idx = $idx + 1;
-              echo '<li class="work-position">';
-              echo '<h5>' .$jobsExtendido[$idx]['title'] .'</h5>';
-              echo '<p>' .$jobsExtendido[$idx]['description'] .'</p>';
-              echo '<strong>Achievements:</strong>';
-              echo '<ul>';
-              echo '<li>Lorem Ipsum</li>';
-              echo '<li>Lorem Ipsum</li>';
-              echo '<li>Lorem Ipsum</li>';
-              echo '</ul>';
-              echo '</li>';
-            } while ($idx < 3);
-          */
-
+    
           $totalMonths = 0;
           for ($idx = 0; $idx < count($jobsExtendido); $idx++){
 
@@ -109,42 +93,11 @@ $jobsExtendido = [
             if ($totalMonths < $limitMonths){
               break; // salimos del cicle for si la condición se cumple
             }
-            /*
-            if ($jobsExtendido[$idx]['visible'] == true){
-              $idx = $idx + 1;
-              echo '<li class="work-position">';
-              echo '<h5>' .$jobsExtendido[$idx]['title'] .'</h5>';
-              echo '<p>' .$jobsExtendido[$idx]['description'] .'</p>';
-              echo '<strong>Achievements:</strong>';
-              echo '<ul>';
-              echo '<li>Lorem Ipsum</li>';
-              echo '<li>Lorem Ipsum</li>';
-              echo '<li>Lorem Ipsum</li>';
-              echo '</ul>';
-              echo '</li>';
-            }
-            */
-            /*
-            if ($jobsExtendido[$idx]['visible'] == false){
-              continue;
-            }
-            */
+           
             $idx = $idx + 1;
 
             printJob($jobsExtendido[$idx])
-            /*
-            echo '<li class="work-position">';
-            echo '<h5>' .$jobsExtendido[$idx]['title'] .'</h5>';
-            echo '<p>' .$jobsExtendido[$idx]['description'] .'</p>';
-            echo '<strong>Achievements:</strong>';
-            echo '<ul>';
-            echo '<li>Lorem Ipsum</li>';
-            echo '<li>Lorem Ipsum</li>';
-            echo '<li>Lorem Ipsum</li>';
-            echo '</ul>';
-            echo '</li>';
-            */
-
+      
           }
 
           ?>
