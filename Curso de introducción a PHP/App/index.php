@@ -1,6 +1,5 @@
 <?php
 /
-
 $jobsExtendido = [
   [
     'title' => 'Junior Machine Learning Engineer',
@@ -31,7 +30,6 @@ $jobsExtendido = [
     'months' => 120
   ]
 ];
-//var_dump($jobsExtendido[0]['title'])
 
 ?>
 
