@@ -55,9 +55,7 @@ $jobsExtendido = [
       <!-- Cabecera del CV -->
       <div id="resume-header" class="row">
 
-        <div class="col-3">
-          <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
-        </div>
+        
 
         <div class="col">
 
@@ -72,26 +70,6 @@ $jobsExtendido = [
         </div>
 
       </div>
-
-      <!-- Resumen del CV en pocas líneas -->
-      <!--
-      <div class="row">
-        <div class="col">
-          <h2 class="border-bottom-gray" >Carrer Summary</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-      -->
-
 
       <div class="row">
 
@@ -184,7 +162,45 @@ $jobsExtendido = [
 
 
 
+  <!-- Resumen del CV en pocas líneas -->
+      <!--
+      <div class="row">
+        <div class="col">
+          <h2 class="border-bottom-gray" >Carrer Summary</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      -->
 
 
 
 
+
+<!--   
+
+
+<div class="col-3">
+  <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+-->
