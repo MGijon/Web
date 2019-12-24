@@ -1,4 +1,12 @@
 <?php
+//require 'BaseElement.php';
+//require 'Job.php';
+//require 'Project.php';
+
+// Hardcodeada 
+$limitMonths = 10;
+
+
 /* Al principio del archivo añadimos las constantes en un chunk de código */
 $jobsExtendido = [
   [
@@ -48,15 +56,91 @@ $jobsExtendido = [
     <title>Resume</title>
   </head>
 
-  <body>
+  <body>  
 
-  
+
+
+    <div class="row" id="resume-header"> 
+      <div class="col">
+        <h1><?php echo 'name harcodeado, luego será la variable que corresponda' ?></h1>
+        <h2>PHP Developer</h2>
+        <ul>
+          <li>Email: bal bal bla bla </li>
+          <li>LinkedIn: bal bla bla bla </li>
+          <li>Twitter: bla bla bla bla </li>
+        </ul>
+      </div> <!-- end col -->
+    </div> <!-- end resume-header row --> 
+
     <div class="row">
       <div class="col">
         <h2 class="border-bottom-gray">Carrer Summary<h2>
         <p>Lorem Ipsum</p>
       </div>     
     </div> <!-- end row -->
+
+    <div class="container">
+    
+      <!-- WORK EXPERIENCE -->
+      <div class="row">
+        <div class="col">
+          <h3 class="border-bottom-gray" >Work Experience</h3>
+          <ul>
+            <?php
+              /* Calculamos los meses totales y si estos exceden o no un límite preestablecido. */
+              $totalMonths = 0;
+
+              for ($idx = 0; $idx < count($jobsExtendido); $idx++){
+
+                $totalMonths += $jobsExtendido[$idx]['months'];
+
+                if ($totalMonths < $limitMonths){
+                  break; 
+                };
+
+                $idx = $idx + 1;
+                printJob($jobsExtendido[$idx]);
+              }
+            ?>
+          </ul>
+        </div> <!-- end col -->
+      </div> <!-- end row -->
+
+      <!-- PROJECTS -->
+      <div class="row">
+        <div class="col">
+          <h3 class="border-bottom-gray">Projects</h3>
+          
+          <!-- PROJECT 1 -->
+          <div class="project"> 
+            <div class="row">
+              <div class="col-3">
+                <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
+              </div> <!-- end col-3 -->
+              <div class="col">
+                <p>Lorem Ipsum</p>
+                <strong>Technologies used:</strong>
+                <spam class="badge badge-secondary">PHP</spam> 
+                <spam class="badge badge-secondary">HTML</spam> 
+                <spam class="badge badge-secondary">CSS</spam> 
+                <spam class="badge badge-secondary">JavaScript</spam> 
+              </div> <!-- end col -->
+            </div> <!-- end row -->    
+          </div> <!-- end project number 1 -->
+
+
+        </div> <!-- end col -->
+      </div> <!-- end row -->
+
+
+      <?php
+       // harcodeadad 
+        $name = 'Pepe';
+        echo $name;
+      ?>
+      
+    </div> <!-- end container -->
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -71,143 +155,3 @@ $jobsExtendido = [
 
   
 </html>
-
-
-
-
-
-
-  <!-- Resumen del CV en pocas líneas -->
-      <!--
-    
-    
-
-
-      <div class="container">
-
- Cabecera del CV
-<div id="resume-header" class="row">
-
-  
-
-  <div class="col">
-
-    <h1><?php echo $name; ?></h1>
-    <h2>PHP Developer</h2>
-    <ul>
-      <li>Mail: hector@mail.com</li>
-      <li>LinkedIn: https://linkedin.com</li>
-      <li>Twitter: @hectorbenitez</li>
-    </ul>
-
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col">
-
-    <div>
-      <h3 class="border-bottom-gray" >Work Experience</h3>
-      <ul>
-
-      <?php
-      /* Calculamos los meses totales y si estos exceden o no un límite preestablecido. */
-      $totalMonths = 0;
-      for ($idx = 0; $idx < count($jobsExtendido); $idx++){
-
-        $totalMonths += $jobsExtendido[$idx]['months'];
-
-        if ($totalMonths < $limitMonths){
-          break; 
-        };
-
-        $idx = $idx + 1;
-        printJob($jobsExtendido[$idx]);
-      ?>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-<div>
-
-        <h3 class="border-bottom-gray">Projects</h3>
-
-
-        <div class="project">
-            <h5>Project X</h5>
-            <div class="row">
-                <div class="col-3">
-                    <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
-                  </div>
-                  <div class="col">
-                    <p>Lorem ipsum.</p>
-                    <strong>Technologies used:</strong>
-                    <span class="badge badge-secondary">PHP</span>
-                    <span class="badge badge-secondary">HTML</span>
-                    <span class="badge badge-secondary">CSS</span>
-                  </div>
-            </div>
-        </div>
-
-
-        <div class="project">
-            <h5>Project X</h5>
-            <div class="row">
-                <div class="col-3">
-                    <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
-                  </div>
-                  <div class="col">
-                    <p>Lorem ipsum.</p>
-                    <strong>Technologies used:</strong>
-                    <span class="badge badge-secondary">PHP</span>
-                    <span class="badge badge-secondary">HTML</span>
-                    <span class="badge badge-secondary">CSS</span>
-                  </div>
-            </div>
-        </div>
-
-
-      </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--   
-
-
-<div class="col-3">
-  <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
--->
