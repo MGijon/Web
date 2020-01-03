@@ -1,7 +1,7 @@
 <?php
-//require 'BaseElement.php';
-//require 'Job.php';
-//require 'Project.php';
+require 'App/Models/BaseElement.php';
+require 'App/Models/Job.php';
+require 'App/Models/Project.php';
 
 // Hardcodeada 
 $limitMonths = 10;
