@@ -1,7 +1,7 @@
 <?php
-require 'App/Models/BaseElement.php';
-require 'App/Models/Job.php';
-require 'App/Models/Project.php';
+require 'Models/BaseElement.php';
+require 'Models/Job.php';
+require 'Models/Project.php';
 
 // Hardcodeada 
 $limitMonths = 10;
@@ -38,6 +38,7 @@ $jobsExtendido = [
     'months' => 120
   ]
 ];
+
 ?>
 
 <!doctype html>

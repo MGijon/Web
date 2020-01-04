@@ -2,6 +2,40 @@
 
 class BaseElement {
     /* BaseElement class. */
+   
+    protected $title; 
+    public $description;
+    public $visible = true; 
+    public $months; 
+
+    public function __construct($title, $description){
+        $this->title = $title; 
+        $this->description = $description; 
+    }
+
+    public function setTitle($t){
+        if ($t == ''){
+            $this->title = 'N/A';
+        } else {
+            $this->title = $t;
+        }
+    }
+
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function getDurationAsString() {
+        $years = floor($this->months / 12);
+        $extraMonths = $this->months % 12;
+      
+        return "$years years $extraMonths months";
+    }
+
+}
+
+
+/*
     private $title;        
     public $description; 
     public $visible; 
@@ -13,7 +47,7 @@ class BaseElement {
     };
 
     public function setTitle($title){
-        /* Set the $title value. */
+        /* Set the $title value. 
         if ($title == ''){
             $this->title = 'N/A';
         } else{
@@ -22,12 +56,12 @@ class BaseElement {
     };
 
     public function getTitle(){
-        /* Get the $title value. */
+        /* Get the $title value. 
         return $this->title;
     };
 
     public function getDurationAsString(){
-        /* Print the $months value convert into a String. */
+        /* Print the $months value convert into a String. 
         $years = floor($this->months / 12);
         $extraMonths = $this->months % 12;
 
@@ -36,39 +70,39 @@ class BaseElement {
 
     // TODO
     public function setDescription($description){
-        /* Set the $description value. */
+        /* Set the $description value. 
         return 0
     };
 
     // TODO
     public function getDescription(){
-        /* Get the $description value. */
+        /* Get the $description value. 
         return 0
     };
 
     // TODO
     public function setVisible($visible){
-        /* Set the $visible value. */
+        /* Set the $visible value. 
         return 0
     };  
 
     // TODO 
     public function getVisible(){
-        /* Get the $visible value. */
+        /* Get the $visible value. 
         return 0
     };
 
     // TODO
     public function setMonths($months){
-        /* Set the $months value. */
+        /* Set the $months value. 
         return 0
     };
 
     // TODO
     public function getMonths(){
-        /* Get the $months value. */
+        /* Get the $months value. 
         return 0
     };
-}
+    */
 
 ?>
