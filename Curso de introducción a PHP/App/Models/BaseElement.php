@@ -14,6 +14,7 @@ class BaseElement {
     }
 
     public function setTitle($t){
+        /* Set value for the protected variable $title. */
         if ($t == ''){
             $this->title = 'N/A';
         } else {
@@ -22,10 +23,12 @@ class BaseElement {
     }
 
     public function getTitle(){
+        /* Return value keeped in the protected variable $title. */
         return $this->title;
     }
 
     public function getDurationAsString() {
+        /* Return a string with the information contained in the public variable $months with a specific format. */
         $years = floor($this->months / 12);
         $extraMonths = $this->months % 12;
       
