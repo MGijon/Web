@@ -9,7 +9,9 @@ class Job extends BaseElement{
         /* 
         Give a specific format to the information contained in the private variable $title and initizlize it and the
         public variable $description.
+        OVERRIDE the father's constructor.
         */
+        parent::__construct($title, $description); // call the father's constructor
         $newTitle = 'Job: ' . $title;
         $this->title = $newTitle;
     }

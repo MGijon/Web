@@ -3,7 +3,7 @@
 class BaseElement {
     /* BaseElement class. */
    
-    protected $title; 
+    protected $title;  // con protected a este contenido pueden acceder las clases hijas, no como con private
     public $description;
     public $visible = true; 
     public $months; 
