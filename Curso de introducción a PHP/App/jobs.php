@@ -2,6 +2,7 @@
 
 require_once 'App/Models/Job.php';
 require_once 'App/Models/Project.php';
+require_once 'App/Models/Printable.php';
 
 $job1 = new Job('PHP Developer', 'This is an awesome job!!!');
 $job1->months = 16;
@@ -24,7 +25,7 @@ $projects = [
     $project1
 ];
   
-function printElement($job) {
+function printElement(Printable $job) {
   /* Print relevant information about a job instance, it does using HTML. */
   if($job->visible == false) {
     return;
