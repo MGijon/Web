@@ -9,13 +9,13 @@ function cambiarNombre(nuevoNombre) {
 }
 */
 
-
+/*
 const getUserAll = new Promise(function(todoBien, todoMal) {
-  // llamar a un api
+  // llamar a un api: es una simulaciñon
   setTimeout(function() {
     // luego de 3 segundos
     todoBien('se acabó el tiempo');
-  }, 5000)
+  }, 5000)   // a los 5 segunos se ejecuta la función todoBien
 })
 
 const getUser = new Promise(function(todoBien, todoMal) {
@@ -25,7 +25,11 @@ const getUser = new Promise(function(todoBien, todoMal) {
     todoBien('se acabó el tiempo 3');
   }, 3000)
 })
+*/
 
+
+
+// Ya comentado de entrada
 // getUser
 //   .then(function() {
 //     console.log('todo está bien en la vida')
@@ -34,20 +38,24 @@ const getUser = new Promise(function(todoBien, todoMal) {
 //     console.log(message)
 //   })
 
+/*
+// Para el array de promesas que le pasamos hace lo que toca
 Promise.race([
   getUser,
   getUserAll,
 ])
 .then(function(message) {
+  // se ejecuta cuando la promesa se cumple
   console.log(message);
 })
 .catch(function(message) {
+  // se ejecuta al rechazar la promesa
   console.log(message)
 })
+*/
 
-
-
-$.ajax('https://randomuser.me/api/sdfdsfdsfs', {
+// Version if jQuery
+$.ajax('https://randomuser.me/api', {
   method: 'GET',
   success: function(data) {
     console.log(data)
@@ -57,7 +65,7 @@ $.ajax('https://randomuser.me/api/sdfdsfdsfs', {
   }
 })
 
-fetch('https://randomuser.me/api/dsfdsfsd')
+fetch('https://randomuser.me/api')
   .then(function (response) {
     // console.log(response)
     return response.json()
