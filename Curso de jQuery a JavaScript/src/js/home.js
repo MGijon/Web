@@ -55,6 +55,7 @@ Promise.race([
 */
 
 // Version if jQuery
+/*
 $.ajax('https://randomuser.me/api', {
   method: 'GET',
   success: function(data) {
@@ -64,7 +65,9 @@ $.ajax('https://randomuser.me/api', {
     console.log(error)
   }
 })
+*/
 
+// Vanilla JS function
 fetch('https://randomuser.me/api')
   .then(function (response) {
     // console.log(response)
